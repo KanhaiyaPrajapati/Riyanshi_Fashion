@@ -8,8 +8,14 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Use Inter (from layout.js) as the default sans font */
+  --font-sans: var(--font-inter);
+  /* Playfair Display for headings / brand */
+  --font-playfair: "Playfair Display", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  /* Brand colors matching your React tailwind.config.js */
+  --color-primary: #9D2235;
+  --color-secondary: #D4AF37;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +28,71 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+/* Tailwind v4 CSS-first custom utilities used across the project */
+
+@layer utilities {
+  /* Typography helpers */
+  .font-playfair {
+    font-family: var(--font-playfair);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-playfair font-semibold tracking-tight text-neutral-900;
+  }
+
+  .section-subtitle {
+    @apply text-xs md:text-sm uppercase tracking-[0.35em] text-primary mb-2;
+  }
+
+  .section-divider {
+    @apply mt-4 h-px w-16 mx-auto bg-gradient-to-r from-primary via-secondary to-primary;
+  }
+
+  /* Button styles */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition-all duration-200 cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold cursor-pointer transition-all duration-200;
+    @apply bg-primary text-white shadow-md hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold cursor-pointer transition-all duration-200;
+    @apply border border-neutral-300 text-neutral-800 bg-white/90 hover:bg-neutral-50 hover:border-primary hover:text-primary;
+  }
+
+  /* Card / surface styles */
+  .glass-card {
+    @apply rounded-3xl border border-white/40 bg-white/70 backdrop-blur-xl shadow-lg shadow-neutral-200/60;
+  }
+
+  .shadow-card {
+    @apply shadow-[0_18px_45px_rgba(15,23,42,0.12)];
+  }
+
+  /* Scroll helpers */
+  .floating-scroll {
+    /* hide scrollbar visually while keeping scroll behavior */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
