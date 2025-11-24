@@ -303,13 +303,22 @@ const Contact = () => {
         {/* Full-Width Map Container */}
         <div className="mt-20 relative z-10">
           <div className="w-full h-[450px] md:h-[600px] overflow-hidden rounded-none md:rounded-2xl shadow-[0_0_50px_-10px_rgba(0,0,0,0.6)]">
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.967401960382!2d72.84125947431095!3d21.193453882103363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e51122fed17%3A0x289f94c60da5ee0e!2sTaste%20of%20Bhagwati!5e0!3m2!1sen!2sin!4v1763801587181!5m2!1sen!2sin"
               className="w-full h-full"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+            ></iframe> */}
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3104.824644523618!2d72.84066477526109!3d21.19306828049768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDExJzM1LjEiTiA3MsKwNTAnMzUuNyJF!5e1!3m2!1sen!2sin!4v1763960784510!5m2!1sen!2sin"
+              className="w-full h-full"
+              style={{ border: 0 }}
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
