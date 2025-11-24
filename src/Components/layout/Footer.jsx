@@ -14,8 +14,8 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: <FiMapPin className="w-5 h-5" />, text: 'Shop No - 28, ReshamWala Market, Ring Road, Surat - 395002' },
-    { icon: <FiPhone className="w-5 h-5" />, text: '+91 8849931533 / 9725490508' },
+    { icon: <FiMapPin className="w-5 h-5" />, text: 'F/Plot No - 113-114, Sahara Darwaja, Fudina Wadi, Near Jash Market Ring Road, Surat - 395002' },
+    { icon: <FiPhone className="w-5 h-5" />, text: '+91 63526 35460' },
     { icon: <FiMail className="w-5 h-5" />, text: 'info@riyanshifashion.com' },
   ];
 
