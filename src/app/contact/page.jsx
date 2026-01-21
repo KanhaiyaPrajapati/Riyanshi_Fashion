@@ -38,14 +38,14 @@ const Contact = () => {
     {
       icon: <FiMapPin className="w-6 h-6 text-primary" />,
       title: "Our Location",
-      value: "Shop No - 28, ReshamWala Market, Ring Road, Surat - 395002",
+      value: "F/Plot No - 113-114, Sahara Darwaja, Fudina Wadi, Near Jash Market Ring Road, Surat - 395002",
       link: "https://maps.google.com",
     },
     {
       icon: <FiPhone className="w-6 h-6 text-primary" />,
       title: "Phone Number",
-      value: "+91 6353635460/ 8849931533",
-      link: "tel:+918849931533",
+      value: "+91 6352635460",
+      link: "tel:+916352635460",
     },
     {
       icon: <FiMail className="w-6 h-6 text-primary" />,
